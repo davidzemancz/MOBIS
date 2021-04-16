@@ -33,9 +33,7 @@ namespace MOBIS.Views
                 if (user.Exists)
                 {
                     // Uzivatel existuje
-                    Console.WriteLine("Id: " + user.Id);
-                    Console.WriteLine("Key: " + user.Key);
-                    Console.WriteLine("E-mail: " + user.Email);
+                    User.soucastny_user = user;
                     Navigation.PushAsync(new Menu());
                 }
                 else
