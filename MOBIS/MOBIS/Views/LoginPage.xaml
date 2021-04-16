@@ -8,7 +8,10 @@
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+			<Entry VerticalOptions="Center" Text="Email"/>
+			<Entry VerticalOptions="Center" Text="Heslo"/>
             <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
-        </StackLayout>
+			<Button VerticalOptions="Center" Text="zapomnel jsem heslo-jsem idiot"/>
+		</StackLayout>
     </ContentPage.Content>
 </ContentPage>
