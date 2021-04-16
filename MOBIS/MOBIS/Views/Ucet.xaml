@@ -8,6 +8,7 @@
 			<Label x:Name="YourLableEmail" FontSize="20" Text="Email"/>
 			<Label x:Name="YourLablePracoviste" FontSize="20" Text="Pracoviste"/>
 			<Label x:Name="YourLableRole" FontSize="20" Text="Pozice"/>
+			<Button VerticalOptions="Center" Text="Zmena hesla"/>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
