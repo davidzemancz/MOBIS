@@ -17,5 +17,10 @@ namespace MOBIS.Views
             InitializeComponent();
             this.BindingContext = new LoginViewModel();
         }
+
+        void TryToLogin(object sender, EventArgs args)
+        {
+             Heslo.Text = "YEEWAH";
+        }
     }
 }
