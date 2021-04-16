@@ -15,6 +15,7 @@ namespace MOBIS.Views
         public Informace()
         {
             InitializeComponent();
+            this.BindingContext = new ViewModels.InformaceViewModel();
         }
     }
 }
