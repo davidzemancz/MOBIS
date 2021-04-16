@@ -16,10 +16,8 @@ namespace MOBIS.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Novinky : ContentPage
     {
-
         public ObservableCollection<Paper> Papers { get; set; } = new ObservableCollection<Paper>();
-
-
+        
         public Novinky()
         {
             InitializeComponent();
