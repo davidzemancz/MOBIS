@@ -8,13 +8,10 @@
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-
-
-            <Image Source="valeo_rgb.png" HorizontalOptions="Center"/>
-            <Entry x:Name="Email" VerticalOptions="Center" Placeholder="Email" TextColor="#4e6b7c"/>
-            <Entry x:Name="Heslo" VerticalOptions="Center" Placeholder="Heslo" IsPassword="True" TextColor="#4e6b7c" />
-            <Button VerticalOptions="Center" Text="Login" Clicked="TryToLogin"/>
-            <Button VerticalOptions="Center" Text="Zapomenuté heslo" TextColor="PaleVioletRed" BackgroundColor="Transparent"/>
-        </StackLayout>
+            <Entry x:Name="Email" VerticalOptions="Center" Text="Email" Placeholder="Email" TextColor="#4e6b7c"/>
+            <Entry x:Name="Heslo" VerticalOptions="Center" Text="Heslo" Placeholder="Heslo" TextColor="#4e6b7c" IsPassword="True"/>
+			<Button VerticalOptions="Center" Text="Login" Clicked="TryToLogin"/>
+			<Button VerticalOptions="Center" Text="Zapomenuté heslo" TextColor="PaleVioletRed" BackgroundColor="Transparent"/>
+		</StackLayout>
     </ContentPage.Content>
 </ContentPage>
