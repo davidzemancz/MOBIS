@@ -36,7 +36,7 @@ namespace MOBIS.Views
                     Console.WriteLine("Id: " + user.Id);
                     Console.WriteLine("Key: " + user.Key);
                     Console.WriteLine("E-mail: " + user.Email);
-                    Navigation.PushAsync(new Zpravy());
+                    Navigation.PushAsync(new Menu());
                 }
                 else
                 {
