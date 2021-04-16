@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using MOBIS.API;
 using MOBIS.Models;
 using MOBIS.ViewModels;
-using Plugin.LocalNotifications;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -32,7 +31,9 @@ namespace MOBIS.Views
             {
                 this.Papers.Add(paper);
             }
-            CrossLocalNotifications.Current.Show("Nove zpravy z vasi oblibene firmy", "hura! :)");
+
+            
+
         }
     }
 }

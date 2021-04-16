@@ -20,15 +20,5 @@ namespace MOBIS.Views
             YourLablePracoviste.Text = "Pracoviste: " + Models.User.soucastny_user.Workplace.ToString();
             YourLableRole.Text = "Pozice: " + Models.User.soucastny_user.Role.ToString();
         }
-
-         async void ZmenaHeslaAsync(object sender, EventArgs args)
-        {
-            string noveHeslo = await DisplayPromptAsync("Zmena Hesla", "Nove heslo");
-            if (noveHeslo != "" && noveHeslo != null)
-            {
-                await DisplayAlert("Oznameni", "Heslo bylo uspesne zmeneno", "OK");
-            }
-
-        }
     }
 }
