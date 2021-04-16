@@ -14,6 +14,7 @@ namespace MOBIS.Views
     {
         public Menu()
         {
+            NavigationPage.SetHasBackButton(this, false);
             NavigationPage ucet = new NavigationPage(new Ucet());
             ucet.IconImageSource = "schedule.png";
             ucet.Title = "Ucet";
