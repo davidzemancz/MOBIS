@@ -41,7 +41,6 @@ namespace MOBIS.Views
                 {
                     // Uzivatel neexistuje
                     DisplayAlert("CHYBA?", "SPATNE JMENO NEBO HESLO", "OK");
-                    //CrossLocalNotifications.Current.Show("New Message", "OK");
 
                 }
             }
