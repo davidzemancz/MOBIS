@@ -9,6 +9,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Plugin.LocalNotifications;
 
 namespace MOBIS.Views
 {
@@ -20,7 +21,7 @@ namespace MOBIS.Views
             InitializeComponent();
             this.BindingContext = new LoginViewModel();
         }
-
+       
         void TryToLogin(object sender, EventArgs args)
         {
             
@@ -40,6 +41,8 @@ namespace MOBIS.Views
                 {
                     // Uzivatel neexistuje
                     DisplayAlert("CHYBA?", "SPATNE JMENO NEBO HESLO", "OK");
+                    //CrossLocalNotifications.Current.Show("New Message", "OK");
+
                 }
             }
             else
