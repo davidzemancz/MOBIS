@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
+using MOBIS.API;
 using MOBIS.Models;
 using MOBIS.ViewModels;
 using Xamarin.Forms;
@@ -24,7 +26,15 @@ namespace MOBIS.Views
             this.BindingContext = new ViewModels.NovinkyViewModel();
 
             this.NovinkyListView.ItemsSource = this.Papers;
-            this.Papers.Add(new Paper(){Title = "Dita"});
+
+            string jsonOutData = RestApi.Post("content/list", "", out bool ok);
+            var data = JsonSerializer.Deserialize<Paper[]>(jsonOutData);
+            foreach (var paper in data)
+            {
+                this.Papers.Add(paper);
+            }
+
+            
 
         }
     }
