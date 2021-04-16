@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace MOBIS.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Informace : ContentView
+    public partial class Informace : ContentPage
     {
         public Informace()
         {
