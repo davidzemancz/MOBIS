@@ -2,4 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MOBIS.Views.Novinky">
+    <ListView x:Name="NovinkyListView"
+              ItemsSource="{Binding Papers}"
+              RowHeight = "200">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout BackgroundColor="#ffffff" Orientation="Vertical" Padding="16">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Title}" TextColor="Black" FontSize="17" FontAttributes="Bold" TextDecorations="None"/>
+                            <Label Text="{Binding Date}" TextColor="Black" FontSize="15"  TextDecorations="None" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <Label Text="{Binding Category}" Padding="4,0,0,0" TextColor="Black" FontSize="15"  TextDecorations="None"/>
+                        <Label TextColor="Black" LineBreakMode="WordWrap" Text="{Binding ContentText}"/>
+
+                        </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>
