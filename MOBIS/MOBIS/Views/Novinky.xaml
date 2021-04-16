@@ -14,8 +14,9 @@
                             <Label Text="{Binding Date}" TextColor="Black" FontSize="15"  TextDecorations="None" HorizontalOptions="EndAndExpand"/>
                         </StackLayout>
                         <Label Text="{Binding Category}" Padding="4,0,0,0" TextColor="Black" FontSize="15"  TextDecorations="None"/>
-						<Label TextColor="Black" LineBreakMode="WordWrap" Text="{Binding ContentText}"/>
-					</StackLayout>
+                        <Label TextColor="Black" LineBreakMode="WordWrap" Text="{Binding ContentText}" MaxLines="6"/>
+                        <Label IsVisible="{Binding ContentTextIsTooLong}" Text="Číst dále..." HorizontalOptions="EndAndExpand" FontSize="12" TextDecorations="Underline" TextColor="Blue"/>
+                    </StackLayout>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
