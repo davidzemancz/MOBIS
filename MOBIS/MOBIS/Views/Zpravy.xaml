@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MOBIS.Views.Zpravy">
+    <ContentPage.Content>
+        <StackLayout>
+			<Button VerticalOptions="Center" Text="Ucet"/>
+			<Button VerticalOptions="Center" Text="Novinky"/>
+			<Button VerticalOptions="Center" Text="Informace"/>
+		</StackLayout>
+    </ContentPage.Content>
+</ContentPage>
