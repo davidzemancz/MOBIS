@@ -10,11 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace MOBIS.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Novinky : ContentView
+    public partial class Novinky : ContentPage
     {
         public Novinky()
         {
             InitializeComponent();
+            this.BindingContext = new ViewModels.NovinkyViewModel();
         }
     }
 }
