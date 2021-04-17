@@ -14,11 +14,8 @@
 			<ColumnDefinition Width="0.2*"/>
 			<ColumnDefinition Width="0.1*"/>
 		</Grid.ColumnDefinitions>
-<<<<<<< HEAD
 		<ImageButton x:Name="flag"  BackgroundColor="#ffffff" Grid.Row="0" Grid.Column="3" Source="ukflag.gif" VerticalOptions="Center" Clicked="ChangeFlags"/>
-=======
 		<BoxView/>
->>>>>>> master
 		<Image Grid.Row="0" Source="id.png" />
 		<BoxView Grid.Column="1"/>
 		<Label Grid.Column="2"
@@ -59,12 +56,9 @@
 			   Text=""
                HorizontalOptions="Center"
                VerticalOptions="Center" />
-		<BoxView Grid.Row="3"
+			<BoxView Grid.Row="3"
                  Grid.ColumnSpan="2"/>
-<<<<<<< HEAD
-		<Button  x:Name="heslo" Grid.Row="4" Grid.ColumnSpan="4"  CornerRadius="69" VerticalOptions="Center" Text="Změna hesla" Clicked="ZmenaHeslaAsync"/>
-=======
-		<Button  Grid.Row="4" Grid.ColumnSpan="3" BackgroundColor="LightGray"  CornerRadius="69" VerticalOptions="Center" Text="Změna hesla" Clicked="ZmenaHeslaAsync"/>
->>>>>>> master
+			<Button  x:Name="heslo" Grid.Row="4" Grid.ColumnSpan="4"  CornerRadius="69" VerticalOptions="Center" Text="Změna hesla" Clicked="ZmenaHeslaAsync"/>
+			<Button  Grid.Row="4" Grid.ColumnSpan="3" BackgroundColor="LightGray"  CornerRadius="69" VerticalOptions="Center" Text="Změna hesla" Clicked="ZmenaHeslaAsync"/>
 	</Grid>
 </ContentPage>
