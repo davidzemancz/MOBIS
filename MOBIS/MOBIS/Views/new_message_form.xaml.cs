@@ -24,6 +24,9 @@ namespace MOBIS.Views
             string id = "0";
             string titul = Titulek.Text;
             string zprava = Zprava.Text;
+
+            DisplayAlert("Oznámeni", "Zpráva byla úspešně vytvořena", "OK");
+
         }
     }
 }
