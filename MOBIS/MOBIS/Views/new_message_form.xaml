@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MOBIS.Views.new_message_form">
+	<StackLayout Margin="10,20">
+		<Label Text="Nová upráva"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
+
+		<Grid HorizontalOptions="FillAndExpand">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Entry Grid.Row="0" Placeholder="datum" FontAttributes="Bold"/>
+		</Grid>
+
+		<Grid HorizontalOptions="FillAndExpand">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Label Grid.Row="0" Text="Last Name:" FontAttributes="Bold"/>
+		</Grid>
+
+		<Grid HorizontalOptions="FillAndExpand">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Label Grid.Row="0" Text="Company:" FontAttributes="Bold"/>
+		</Grid>
+		
+		<Grid HorizontalOptions="FillAndExpand">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Label Grid.Row="0" Text="Company:" FontAttributes="Bold"/>
+		</Grid>
+	</StackLayout>
+</ContentPage>
