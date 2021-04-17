@@ -19,7 +19,7 @@ namespace MOBIS.Views
 
             NavigationPage ucet = new NavigationPage(new Ucet());
             ucet.IconImageSource = "schedule.png";
-            ucet.Title = "Ucet";
+            ucet.Title = "Účet";
 
             NavigationPage informace = new NavigationPage(new Novinky());
             informace.IconImageSource = "schedule.png";
