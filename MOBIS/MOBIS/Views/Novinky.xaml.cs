@@ -27,7 +27,8 @@ namespace MOBIS.Views
 
             this.NovinkyListView.ItemsSource = this.Papers;
 
-            string jsonOutData = RestApi.Post("content/list", "", out bool ok);
+            string jsonInData = "{userId:" + User.Current.Id + "}";
+            string jsonOutData = RestApi.Post("content/list", jsonInData, out bool ok);
             var data = JsonSerializer.Deserialize<Paper[]>(jsonOutData);
             foreach (var paper in data)
             {

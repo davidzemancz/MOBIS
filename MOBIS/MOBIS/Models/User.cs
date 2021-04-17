@@ -6,7 +6,8 @@ namespace MOBIS.Models
 {
     public class User
     {
-        public static User soucastny_user;
+        public static User Current { get; set; }
+
         public int Id { get; set; }
 
         public string Workplace { get; set; }
