@@ -27,7 +27,7 @@ namespace MOBIS.Views
 
             this.NovinkyListView.ItemsSource = this.Papers;
 
-            string jsonInData = "{ \"userId\":" + User.Current.Id + "}";
+            string jsonInData = "{ \"UserId\":" + User.Current.Id + ",\"Type\":1}"; //jednicka pro novinky, 2 pro informace
             string jsonOutData = RestApi.Post("content/list", jsonInData, out bool ok);
             var data = JsonSerializer.Deserialize<Paper[]>(jsonOutData);
             foreach (var paper in data)
@@ -35,6 +35,11 @@ namespace MOBIS.Views
                 this.Papers.Add(paper);
             }
             CrossLocalNotifications.Current.Show("Nove zpravy z vasi oblibene firmy", "hura! :)");
+        }
+
+        void cist_vice(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new Reader(((Button)sender).CommandParameter.ToString()));
         }
     }
 }
