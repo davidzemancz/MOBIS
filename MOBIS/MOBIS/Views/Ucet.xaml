@@ -8,7 +8,7 @@
 			<Label x:Name="YourLableEmail" FontSize="20" Text="Email"/>
 			<Label x:Name="YourLablePracoviste" FontSize="20" Text="Pracoviste"/>
 			<Label x:Name="YourLableRole" FontSize="20" Text="Pozice"/>
-			<Button VerticalOptions="Center" Text="Zmena hesla" Clicked="ZmenaHeslaAsync"/>
+			<Button CornerRadius="69" VerticalOptions="Center" Text="Zmena hesla" Clicked="ZmenaHeslaAsync"/>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
