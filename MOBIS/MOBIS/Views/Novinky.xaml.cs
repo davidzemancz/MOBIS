@@ -22,6 +22,7 @@ namespace MOBIS.Views
         public Novinky()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             this.BindingContext = new ViewModels.NovinkyViewModel();
 
             this.NovinkyListView.ItemsSource = this.Papers;
