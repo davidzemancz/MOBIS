@@ -46,7 +46,7 @@ namespace MOBIS.Views
             string jsonInData = "{ \"UserId\":" + User.Current.Id + ",\"Type\":\"Informace\"}"; //jednicka pro novinky, 2 pro informace
             string jsonOutData = RestApi.Post("content/list", jsonInData, out bool ok);
             var data = JsonSerializer.Deserialize<Paper[]>(jsonOutData);
-            foreach (var paper in data)
+            foreach (var paper in data.Reverse())
             {
                 this.Papers.Add(paper);
             }
