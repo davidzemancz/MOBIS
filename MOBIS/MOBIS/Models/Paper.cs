@@ -16,5 +16,7 @@ namespace MOBIS.Models
         public string ExpirationDate { get; set; }
         public string ContentText { get; set; }
         public bool ContentTextIsTooLong => this.ContentText.Length > 200;
+
+        public bool IsEditor => this.Category == "Editor";
     }
 }
