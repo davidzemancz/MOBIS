@@ -16,5 +16,14 @@ namespace MOBIS.Views
         {
             InitializeComponent();
         }
+
+        public void parseText(object sender, EventArgs args)
+        {
+            string date = Datum.Text;
+            string autor = Autor.Text;
+            string id = "0";
+            string titul = Titulek.Text;
+            string zprava = Zprava.Text;
+        }
     }
 }
