@@ -11,6 +11,7 @@ namespace MOBIS.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Ucet : ContentPage
     {
+        public bool language = false;
         public Ucet()
         {
             InitializeComponent();
@@ -21,8 +22,14 @@ namespace MOBIS.Views
             YourLablePracoviste.Text = Models.User.Current.Workplace.ToString();
             YourLableRole.Text = Models.User.Current.Role.ToString();
         }
+        public void ChangeFlags(object sender, EventArgs e)
+        {
+            language = !language;
+            if (language == true) { flag.Source = "czflag.gif"; heslo.Text = "Password change"; }
+            else { flag.Source = "ukflag.gif"; heslo.Text = "Změna hesla"; }
+        }
 
-         async void ZmenaHeslaAsync(object sender, EventArgs args)
+        async void ZmenaHeslaAsync(object sender, EventArgs args)
         {
             string noveHeslo = await DisplayPromptAsync("Změna hesla", "Nové heslo");
             if (noveHeslo != "" && noveHeslo != null)
