@@ -10,10 +10,10 @@
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
             <Image Source="valeo_rgb.png" HorizontalOptions="Center"/>
-            <Entry x:Name="Email" VerticalOptions="Center" Placeholder="Email" TextColor="#4e6b7c"/>
-            <Entry x:Name="Heslo" VerticalOptions="Center" Placeholder="Heslo" IsPassword="True" TextColor="#4e6b7c" />
-            <Button VerticalOptions="Center" Text="Přihlásit se" Clicked="TryToLogin"/>
-            <Button VerticalOptions="Center" Text="Zapomenuté heslo" TextColor="LightGray" BackgroundColor="Transparent"/>
+			<Entry x:Name="Email" VerticalOptions="Center" Placeholder="E-mail" HorizontalTextAlignment="Center" TextColor="#4e6b7c"/>
+            <Entry x:Name="Heslo" VerticalOptions="Center" Placeholder="Heslo" HorizontalTextAlignment="Center" IsPassword="True" TextColor="#4e6b7c" />
+			<Button CornerRadius="69" VerticalOptions="Center" Text="Přihlásit se" Clicked="TryToLogin"/>
+			<Button VerticalOptions="Center" Text="Zapomenuté heslo" TextColor="LightGray" BackgroundColor="Transparent"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
