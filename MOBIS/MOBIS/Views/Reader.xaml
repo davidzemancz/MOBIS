@@ -7,7 +7,9 @@
 		<ScrollView VerticalOptions="FillAndExpand">
 			<StackLayout>
 				<Label x:Name="Zprava" TextType="Html"/>
+				<Editor x:Name="Editovatelna_zprava" IsVisible="false"/>
 				<!-- More Label objects go here -->
+				<Button Text="Uložit" x:Name="Save_button" IsEnabled="false" IsVisible="false" Clicked="save_message"/>
 			</StackLayout>
 		</ScrollView>
 	</StackLayout>
