@@ -34,7 +34,7 @@ namespace MOBIS.Views
                 if (user.Exists)
                 {
                     // Uzivatel existuje
-                    User.soucastny_user = user;
+                    User.Current = user;
                     Navigation.PushAsync(new Menu());
                 }
                 else
