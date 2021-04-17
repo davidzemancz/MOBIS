@@ -35,11 +35,20 @@ namespace MOBIS.Views
                 this.Papers.Add(paper);
             }
             CrossLocalNotifications.Current.Show("Nove zprávy z vaší oblíbene firmy", "hurá! :)");
+            if (User.Current.Role == "Editor")
+            {
+               
+            }
         }
 
         void cist_vice(object sender, EventArgs args)
         {
             Navigation.PushAsync(new Reader(((Button)sender).CommandParameter.ToString()));
+        }
+         
+        private void Edit(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new Reader(((Button)sender).CommandParameter.ToString(),true));
         }
     }
 }
