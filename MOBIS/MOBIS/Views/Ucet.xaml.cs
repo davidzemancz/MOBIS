@@ -16,10 +16,10 @@ namespace MOBIS.Views
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             this.BindingContext = new ViewModels.UcetViewModel();
-            YourLableID.Text = "ID: " +  Models.User.Current.Id.ToString();
-            YourLableEmail.Text = "Email: " + Models.User.Current.Email.ToString();
-            YourLablePracoviste.Text = "Pracoviste: " + Models.User.Current.Workplace.ToString();
-            YourLableRole.Text = "Pozice: " + Models.User.Current.Role.ToString();
+            YourLableID.Text = Models.User.Current.Id.ToString();
+            YourLableEmail.Text = Models.User.Current.Email.ToString();
+            YourLablePracoviste.Text = Models.User.Current.Workplace.ToString();
+            YourLableRole.Text = Models.User.Current.Role.ToString();
         }
 
          async void ZmenaHeslaAsync(object sender, EventArgs args)
