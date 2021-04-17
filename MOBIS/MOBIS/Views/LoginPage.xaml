@@ -13,7 +13,7 @@
 			<Entry x:Name="Email" VerticalOptions="Center" Placeholder="E-mail" HorizontalTextAlignment="Center" TextColor="#4e6b7c"/>
             <Entry x:Name="Heslo" VerticalOptions="Center" Placeholder="Heslo" HorizontalTextAlignment="Center" IsPassword="True" TextColor="#4e6b7c" />
 			<Button CornerRadius="69" VerticalOptions="Center" Text="Přihlásit se" Clicked="TryToLogin"/>
-			<Button VerticalOptions="Center" Text="Zapomenuté heslo" TextColor="LightGray" BackgroundColor="Transparent"/>
+			<Button x:name="zapomenute_heslo" VerticalOptions="Center" Text="Zapomenuté heslo" TextColor="LightGray" BackgroundColor="Transparent" Clicked="zapomenute_heslo"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
