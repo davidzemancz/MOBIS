@@ -2,13 +2,62 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MOBIS.Views.Ucet">
-	<ContentPage.Content>
-		<StackLayout>
-			<Label Margin="10" x:Name="YourLableID" Text="ID number"/>
-			<Label Margin="10" x:Name="YourLableEmail" Text="Email"/>
-			<Label Margin="10" x:Name="YourLablePracoviste" Text="Pracovište"/>
-			<Label Margin="10" x:Name="YourLableRole" Text="Pozice"/>
-			<Button CornerRadius="69" VerticalOptions="Center" Text="Změna hesla" Clicked="ZmenaHeslaAsync"/>
-		</StackLayout>
-	</ContentPage.Content>
+	<Grid Margin="15">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.5*" />
+			<RowDefinition Height="0.5*"/>
+			<RowDefinition Height="0.5*" />
+			<RowDefinition Height="0.5*" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="0.3*"/>
+			<ColumnDefinition Width="0.5*"/>
+		</Grid.ColumnDefinitions>
+		<BoxView/>
+		<Image Grid.Row="0" Source="id.png" />
+		<BoxView Grid.Column="1"/>
+		<Label Grid.Column="2"
+               x:Name="YourLableID"
+			   Text=""
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+		<BoxView Grid.Row="1"/>
+		<Image Grid.Row="1"
+               Source="jmeno.png" />
+		<BoxView Grid.Row="1"
+                 Grid.Column="1"/>
+		<Label Grid.Row="1"
+               Grid.Column="2"
+                x:Name="YourLableEmail"
+			   Text=""
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+		<BoxView Grid.Row="2"
+                 Grid.ColumnSpan="2"/>
+		<Image Grid.Row="2"
+               Source="lokace.png"
+               VerticalOptions="Center" />
+		<Label Grid.Row="2"
+               Grid.Column="2"
+                x:Name="YourLablePracoviste"
+			   Text=""
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+		<BoxView Grid.Row="3"
+                 Grid.ColumnSpan="2"/>
+		<Image Grid.Row="3"
+               Source="kufr.png"
+               VerticalOptions="Center" />
+		<Label Grid.Row="3"
+               Grid.Column="2"
+                x:Name="YourLableRole"
+			   Text=""
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+		<BoxView Grid.Row="3"
+                 Grid.ColumnSpan="2"/>
+		<Button  Grid.Row="4" Grid.ColumnSpan="3"  CornerRadius="69" VerticalOptions="Center" Text="Změna hesla" Clicked="ZmenaHeslaAsync"/>
+		</Grid>
+	
 </ContentPage>
