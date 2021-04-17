@@ -29,11 +29,7 @@ namespace MOBIS.Views
             novinky.IconImageSource = "schedule.png";
             novinky.Title = "Informace";
 
-            NavigationPage forma_smazat = new NavigationPage(new new_message_form());
-            novinky.IconImageSource = "schedule.png";
-            novinky.Title = "forma";
 
-            Children.Add(forma_smazat);
             Children.Add(informace);
             Children.Add(novinky);
             Children.Add(ucet);
