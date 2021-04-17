@@ -42,7 +42,7 @@ namespace MOBIS.Views
         {
             base.OnAppearing();
             this.Papers.Clear();
-            string jsonInData = "{ \"UserId\":" + User.Current.Id + ",\"Type\":\"Novinky\"}"; //jednicka pro novinky, 2 pro informace
+            string jsonInData = "{ \"UserId\":" + User.Current.Id.ToString() + ",\"Type\":\"Novinky\"}"; //jednicka pro novinky, 2 pro informace
             string jsonOutData = RestApi.Post("content/list", jsonInData, out bool ok);
             var data = JsonSerializer.Deserialize<Paper[]>(jsonOutData);
             foreach (var paper in data.Reverse())
