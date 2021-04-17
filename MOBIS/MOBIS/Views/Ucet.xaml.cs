@@ -14,6 +14,7 @@ namespace MOBIS.Views
         public Ucet()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             this.BindingContext = new ViewModels.UcetViewModel();
             YourLableID.Text = "ID: " +  Models.User.soucastny_user.Id.ToString();
             YourLableEmail.Text = "Email: " + Models.User.soucastny_user.Email.ToString();
