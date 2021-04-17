@@ -18,9 +18,13 @@ namespace MOBIS.Views
             NavigationPage.SetHasNavigationBar(this, false);
             this.BindingContext = new ViewModels.UcetViewModel();
             YourLableID.Text = Models.User.Current.Id.ToString();
+            YourLableID.FontSize = 16;
             YourLableEmail.Text = Models.User.Current.Email.ToString();
+            YourLableEmail.FontSize = 16; 
             YourLablePracoviste.Text = Models.User.Current.Workplace.ToString();
+            YourLablePracoviste.FontSize = 16;
             YourLableRole.Text = Models.User.Current.Role.ToString();
+            YourLableRole.FontSize = 16;
         }
         public void ChangeFlags(object sender, EventArgs e)
         {
