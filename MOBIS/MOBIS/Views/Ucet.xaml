@@ -4,11 +4,11 @@
              x:Class="MOBIS.Views.Ucet">
 	<ContentPage.Content>
 		<StackLayout>
-			<Label x:Name="YourLableID"  FontSize="20"  Text="ID number"/>
-			<Label x:Name="YourLableEmail" FontSize="20" Text="Email"/>
-			<Label x:Name="YourLablePracoviste" FontSize="20" Text="Pracoviste"/>
-			<Label x:Name="YourLableRole" FontSize="20" Text="Pozice"/>
-			<Button CornerRadius="69" VerticalOptions="Center" Text="Zmena hesla" Clicked="ZmenaHeslaAsync"/>
+			<Label Margin="10" x:Name="YourLableID" Text="ID number"/>
+			<Label Margin="10" x:Name="YourLableEmail" Text="Email"/>
+			<Label Margin="10" x:Name="YourLablePracoviste" Text="Pracovište"/>
+			<Label Margin="10" x:Name="YourLableRole" Text="Pozice"/>
+			<Button CornerRadius="69" VerticalOptions="Center" Text="Změna hesla" Clicked="ZmenaHeslaAsync"/>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
