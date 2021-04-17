@@ -50,7 +50,11 @@ namespace MOBIS.Views
                 this.Papers.Add(paper);
             }
             CrossLocalNotifications.Current.Show("Nove zprávy z vaší oblíbene firmy", "hurá! :)");
+        }
 
+        private void new_message(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new new_message_form());
         }
     }
 }
