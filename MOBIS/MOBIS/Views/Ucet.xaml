@@ -8,13 +8,15 @@
 			<RowDefinition Height="0.5*"/>
 			<RowDefinition Height="0.5*" />
 			<RowDefinition Height="0.5*" />
+			<RowDefinition Height="0.5*" />
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="0.3*"/>
+			<ColumnDefinition Width="0.8*"/>
 			<ColumnDefinition Width="0.5*"/>
+			<ColumnDefinition Width="4*"/>
 		</Grid.ColumnDefinitions>
-		<BoxView/>
+		<ImageButton BackgroundColor="#ffffff" Grid.Row="0" Grid.Column="3" Source="ukflag.gif" VerticalOptions="Center"/>
 		<Image Grid.Row="0" Source="id.png" />
 		<BoxView Grid.Column="1"/>
 		<Label Grid.Column="2"
@@ -57,6 +59,6 @@
                VerticalOptions="Center" />
 		<BoxView Grid.Row="3"
                  Grid.ColumnSpan="2"/>
-		<Button  Grid.Row="4" Grid.ColumnSpan="3"  CornerRadius="69" VerticalOptions="Center" Text="Změna hesla" Clicked="ZmenaHeslaAsync"/>
+		<Button  Grid.Row="4" Grid.ColumnSpan="4"  CornerRadius="69" VerticalOptions="Center" Text="Změna hesla" Clicked="ZmenaHeslaAsync"/>
 	</Grid>
 </ContentPage>
