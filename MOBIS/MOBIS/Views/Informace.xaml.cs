@@ -15,6 +15,7 @@ namespace MOBIS.Views
         public Informace()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             this.BindingContext = new ViewModels.InformaceViewModel();
         }
     }
