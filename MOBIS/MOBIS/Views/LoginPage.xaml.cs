@@ -49,5 +49,14 @@ namespace MOBIS.Views
                 throw new Exception("Připojení se nezdařilo.");
             }
         }
+
+        async void zapomenute_heslo(object sender, EventArgs args)
+        {
+            string email = await DisplayPromptAsync("Změna hesla", "Zadejte svůj e-mail");
+            if (email != "" && email != null)
+            {
+                await DisplayAlert("Oznamení", "Odkaz pro obnovení hesla Vám byl zaslán na e-mail", "OK");
+            }
+        }
     }
 }
