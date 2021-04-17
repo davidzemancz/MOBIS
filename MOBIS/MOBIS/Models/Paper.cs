@@ -16,5 +16,6 @@ namespace MOBIS.Models
         public string ExpirationDate { get; set; }
         public string ContentText { get; set; }
         public bool ContentTextIsTooLong => this.ContentText.Length > 200;
+        public bool Editable => (User.Current.Role == "Editor" || User.Current.Role == "Admin" || User.Current.Role == "SuperAdmin");
     }
 }

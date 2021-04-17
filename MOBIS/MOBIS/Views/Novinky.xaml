@@ -18,7 +18,7 @@
                         <Label TextColor="Black" LineBreakMode="WordWrap" Text="{Binding ContentText}" MaxLines="5" TextType="Html"/>
 						<StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
 							<StackLayout Orientation="Vertical"  HorizontalOptions="Start">
-								<Button IsVisible="true" Text="Edit" x:Name="EditButton" FontSize="12" Clicked="Edit" TextColor="Blue" BackgroundColor="Transparent" CommandParameter="{Binding Id}"/>
+                                <Button IsVisible="{Binding Editable}" Text="Edit" x:Name="EditButton" FontSize="12" Clicked="Edit" TextColor="Blue" BackgroundColor="Transparent" CommandParameter="{Binding Id}"/>
 							</StackLayout>
 							<StackLayout Orientation="Vertical"  HorizontalOptions="EndAndExpand">
 								<Button  IsVisible="{Binding ContentTextIsTooLong}" Text="Číst dále..." x:Name="CistVice" HorizontalOptions="EndAndExpand" FontSize="12" Clicked="cist_vice" TextColor="Blue" BackgroundColor="Transparent" CommandParameter="{Binding Id}"/>
