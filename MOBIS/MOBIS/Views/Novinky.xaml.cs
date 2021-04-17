@@ -34,7 +34,7 @@ namespace MOBIS.Views
             {
                 this.Papers.Add(paper);
             }
-            CrossLocalNotifications.Current.Show("Nove zpravy z vasi oblibene firmy", "hura! :)");
+            CrossLocalNotifications.Current.Show("Nove zprávy z vaší oblíbene firmy", "hurá! :)");
         }
 
         void cist_vice(object sender, EventArgs args)
