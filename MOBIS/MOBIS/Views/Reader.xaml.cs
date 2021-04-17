@@ -15,25 +15,30 @@ namespace MOBIS.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Reader : ContentPage
     {
+        private string _id;
+
         public Reader(string id)
         {
             InitializeComponent();
-            read_message(id);
+            this._id = id;
+            read_message();
             this.BindingContext = new ViewModels.UcetViewModel();
         }
 
         public Reader(string id, bool edit)
         {
+
             InitializeComponent();
-            edit_message(id);
+            this._id = id;
+            edit_message();
             Save_button.IsVisible = true;
             Save_button.IsEnabled = true;
             this.BindingContext = new ViewModels.UcetViewModel();
         }
 
-        private void edit_message(string id)
+        private void edit_message()
         {
-            string jsonInData = "{ \"Id\":" + id + "}";
+            string jsonInData = "{ \"Id\":" + this._id + "}";
             string jsonOutData = RestApi.Post("content/load", jsonInData, out bool ok);
             var data = JsonSerializer.Deserialize<Paper>(jsonOutData);
             Editovatelna_zprava.Text = data.ContentText;
@@ -42,9 +47,9 @@ namespace MOBIS.Views
         }
 
 
-        private void read_message(string id)
+        private void read_message()
         {
-            string jsonInData = "{ \"Id\":" + id + "}";
+            string jsonInData = "{ \"Id\":" + this._id + "}";
             string jsonOutData = RestApi.Post("content/load", jsonInData, out bool ok); 
             var data = JsonSerializer.Deserialize<Paper>(jsonOutData);
             Zprava.Text = data.ContentText;
@@ -54,6 +59,9 @@ namespace MOBIS.Views
         private void save_message(object sender, EventArgs args)
         {
             //poslat zpatky text s id zpravy na server ktery ji pushne ostatnim modifikovanou
+            string jsonInData = "{ \"Id\":" + this._id + ", \"ContentText\": \"" + this.Editovatelna_zprava.Text + "\"}";
+            string jsonOutData = RestApi.Post("content/update", jsonInData, out bool ok);
+
         }
     }
 }
