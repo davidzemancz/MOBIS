@@ -24,10 +24,10 @@ namespace MOBIS.Views
 
          async void ZmenaHeslaAsync(object sender, EventArgs args)
         {
-            string noveHeslo = await DisplayPromptAsync("Zmena Hesla", "Nove heslo");
+            string noveHeslo = await DisplayPromptAsync("Změna hesla", "Nové heslo");
             if (noveHeslo != "" && noveHeslo != null)
             {
-                await DisplayAlert("Oznameni", "Heslo bylo uspesne zmeneno", "OK");
+                await DisplayAlert("Oznámeni", "Heslo bylo úspěšně změněno", "OK");
             }
 
         }
