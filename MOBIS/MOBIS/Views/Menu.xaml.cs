@@ -29,6 +29,7 @@ namespace MOBIS.Views
             novinky.IconImageSource = "schedule.png";
             novinky.Title = "Informace";
 
+
             Children.Add(informace);
             Children.Add(novinky);
             Children.Add(ucet);
