@@ -12,9 +12,14 @@
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
+<<<<<<< HEAD
 			<ColumnDefinition Width="0.8*"/>
 			<ColumnDefinition Width="0.5*"/>
 			<ColumnDefinition Width="4*"/>
+=======
+			<ColumnDefinition Width="0.2*"/>
+			<ColumnDefinition Width="0.1*"/>
+>>>>>>> master
 		</Grid.ColumnDefinitions>
 		<ImageButton BackgroundColor="#ffffff" Grid.Row="0" Grid.Column="3" Source="ukflag.gif" VerticalOptions="Center"/>
 		<Image Grid.Row="0" Source="id.png" />
