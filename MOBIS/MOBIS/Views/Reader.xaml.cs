@@ -29,6 +29,7 @@ namespace MOBIS.Views
             string jsonOutData = RestApi.Post("content/load", jsonInData, out bool ok); 
             var data = JsonSerializer.Deserialize<Paper>(jsonOutData);
             Zprava.Text = data.ContentText;
+            SetBinding(ContentPage.TitleProperty, new Binding(data.Title));
         }
     }
 }
