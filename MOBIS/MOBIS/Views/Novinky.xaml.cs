@@ -24,21 +24,8 @@ namespace MOBIS.Views
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             this.BindingContext = new ViewModels.NovinkyViewModel();
-
             this.NovinkyListView.ItemsSource = this.Papers;
 
-            string jsonInData = "{ \"UserId\":" + User.Current.Id + ",\"Type\":\"Novinky\"}"; //jednicka pro novinky, 2 pro informace
-            string jsonOutData = RestApi.Post("content/list", jsonInData, out bool ok);
-            var data = JsonSerializer.Deserialize<Paper[]>(jsonOutData);
-            foreach (var paper in data)
-            {
-                this.Papers.Add(paper);
-            }
-            CrossLocalNotifications.Current.Show("Nove zprávy z vaší oblíbene firmy", "hurá! :)");
-            if (User.Current.Role == "Editor")
-            {
-               
-            }
         }
 
         void cist_vice(object sender, EventArgs args)
@@ -49,6 +36,21 @@ namespace MOBIS.Views
         private void Edit(object sender, EventArgs args)
         {
             Navigation.PushAsync(new Reader(((Button)sender).CommandParameter.ToString(),true));
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            this.Papers.Clear();
+            string jsonInData = "{ \"UserId\":" + User.Current.Id + ",\"Type\":\"Novinky\"}"; //jednicka pro novinky, 2 pro informace
+            string jsonOutData = RestApi.Post("content/list", jsonInData, out bool ok);
+            var data = JsonSerializer.Deserialize<Paper[]>(jsonOutData);
+            foreach (var paper in data)
+            {
+                this.Papers.Add(paper);
+            }
+            CrossLocalNotifications.Current.Show("Nove zprávy z vaší oblíbene firmy", "hurá! :)");
+
         }
     }
 }
