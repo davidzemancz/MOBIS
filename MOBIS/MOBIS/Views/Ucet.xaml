@@ -59,6 +59,6 @@
                VerticalOptions="Center" />
 			<BoxView Grid.Row="3"
                  Grid.ColumnSpan="2"/>
-		<Button  x:Name="heslo" Grid.Row="4" Grid.ColumnSpan="4"  CornerRadius="69" VerticalOptions="Center" Text="Změna hesla" Clicked="ZmenaHeslaAsync"/>
+		<Button  x:Name="heslo" Grid.Row="4" Grid.ColumnSpan="4"  CornerRadius="69" VerticalOptions="Center" Text="Změna hesla" Clicked="ZmenaHeslaAsync" BackgroundColor="#4e6b7c"/>
 	</Grid>
 </ContentPage>

@@ -25,7 +25,7 @@ namespace MOBIS.API
             public string Id { get; set; }
         }
 
-        public const bool Local = false;
+        public const bool Local = true;
 
         public static List<User> Users { get; set; } = new List<User>()
         {
@@ -35,7 +35,29 @@ namespace MOBIS.API
             new User("superadmin@v.cz", ""){Exists = true, Workplace = "Praha", Role = "SuperAdmin", Id = 4}
         };
 
-        public static List<Paper> Content { get; set; } = new List<Paper>();
+        public static List<Paper> Content { get; set; } = new List<Paper>()
+        {
+            new Paper()
+            {
+                Id = 1, Type = "Novinka", Title = "Nové jízdní řády", Workplace = "Praha", Category = "Oznámení",
+            },
+            new Paper()
+            {
+                Id = 2, Type = "Novinka", Title = "Zaměstnanecké karty", Workplace = "Rakovník", Category = "Oznámení",
+            },
+            new Paper()
+            {
+                Id = 3, Type = "Novinka", Title = "Státní podpora", Workplace = "Humpolec", Category = "Oznámení",
+            },
+            new Paper()
+            {
+                Id = 4, Type = "Informace", Title = "Shrnutí za rok 2020", Workplace = "Vše", Category = "Důležité",
+            },
+            new Paper()
+            {
+                Id = 5, Type = "Informace", Title = "Obědy zdarma", Workplace = "Praha", Category = "Důležité",
+            },
+        };
 
         public static string Post(string url, string jsonData, out bool ok)
         {
