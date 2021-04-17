@@ -42,6 +42,7 @@
 			</StackLayout>
 		</ScrollView>
 		<ImageButton
+			IsVisible="{Binding Editable}"
 			Clicked="new_message"
             AbsoluteLayout.LayoutBounds="0.95,0.95,80,80"
             AbsoluteLayout.LayoutFlags="PositionProportional"
