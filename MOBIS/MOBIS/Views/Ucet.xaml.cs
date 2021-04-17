@@ -29,7 +29,6 @@ namespace MOBIS.Views
             {
                 await DisplayAlert("Oznámeni", "Heslo bylo úspěšně změněno", "OK");
             }
-
         }
     }
 }
