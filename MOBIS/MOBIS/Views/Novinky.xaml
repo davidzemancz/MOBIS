@@ -3,35 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MOBIS.Views.Novinky"
 			 BackgroundColor="#ffffff">
+	<AbsoluteLayout>
 	<ListView x:Name="NovinkyListView"
               ItemsSource="{Binding Papers}"
               RowHeight = "250">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
 					<StackLayout BackgroundColor="#ffffff" Orientation="Vertical" Padding="16,16,16,0">
 						<StackLayout Orientation="Horizontal">
 							<Label Text="{Binding Title}" TextColor="Black" FontSize="18" FontAttributes="Bold" TextDecorations="Underline"/>
-                            <Label Text="{Binding Workplace}" Padding="0,4,0,0" TextColor="Black" FontSize="15"  TextDecorations="None" HorizontalOptions="EndAndExpand"/>
-                            <Label Text="{Binding Date}" Padding="0,4,0,0" TextColor="Black" FontSize="15"  TextDecorations="None" HorizontalOptions="End"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding Category}" Padding="4,0,0,0" TextColor="Black" FontSize="15"  TextDecorations="None"/>
-                        </StackLayout>
-                        <Label TextColor="Black" LineBreakMode="WordWrap" Text="{Binding ContentText}" MaxLines="6" TextType="Html"/>
-                        <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
-						    <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
-							    <StackLayout Orientation="Vertical"  VerticalOptions="EndAndExpand">
-                                    <Button IsVisible="{Binding Editable}" Text="Upravit" x:Name="EditButton" FontSize="12" Clicked="Edit" TextColor="Blue" BackgroundColor="Transparent" CommandParameter="{Binding Id}"/>
-							    </StackLayout>
-							    <StackLayout Orientation="Vertical"  HorizontalOptions="EndAndExpand">
-								    <Button  IsVisible="{Binding ContentTextIsTooLong}" Text="Číst dále..." x:Name="CistVice" HorizontalOptions="EndAndExpand" FontSize="12" Clicked="cist_vice" TextColor="Blue" BackgroundColor="Transparent" CommandParameter="{Binding Id}"/>
-							    </StackLayout>
-						    </StackLayout>
-                        </StackLayout>
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+							<Label Text="{Binding Workplace}" Padding="0,4,0,0" TextColor="Black" FontSize="15"  TextDecorations="None" HorizontalOptions="EndAndExpand"/>
+							<Label Text="{Binding Date}" Padding="0,4,0,0" TextColor="Black" FontSize="15"  TextDecorations="None" HorizontalOptions="End"/>
+						</StackLayout>
+						<StackLayout Orientation="Horizontal">
+							<Label Text="{Binding Category}" Padding="4,0,0,0" TextColor="Black" FontSize="15"  TextDecorations="None"/>
+						</StackLayout>
+						<Label TextColor="Black" LineBreakMode="WordWrap" Text="{Binding ContentText}" MaxLines="6" TextType="Html"/>
+						<StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+							<StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+								<StackLayout Orientation="Vertical"  VerticalOptions="EndAndExpand">
+									<Button IsVisible="{Binding Editable}" Text="Upravit" x:Name="EditButton" FontSize="12" Clicked="Edit" TextColor="Blue" BackgroundColor="Transparent" CommandParameter="{Binding Id}"/>
+								</StackLayout>
+								<StackLayout Orientation="Vertical"  HorizontalOptions="EndAndExpand">
+									<Button  IsVisible="{Binding ContentTextIsTooLong}" Text="Číst dále..." x:Name="CistVice" HorizontalOptions="EndAndExpand" FontSize="12" Clicked="cist_vice" TextColor="Blue" BackgroundColor="Transparent" CommandParameter="{Binding Id}"/>
+								</StackLayout>
+							</StackLayout>
+						</StackLayout>
+					</StackLayout>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+		<ImageButton 
+			Clicked="new_message"
+            AbsoluteLayout.LayoutBounds="0.95,0.95,80,80"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="#82e600"
+            CornerRadius="40"
+            HeightRequest="80"
+            Source="ic_star.png"
+            WidthRequest="80" />
+	</AbsoluteLayout>
 </ContentPage>
+
