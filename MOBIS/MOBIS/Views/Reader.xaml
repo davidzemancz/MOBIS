@@ -5,7 +5,7 @@
 	<StackLayout Margin="20">
 		<ScrollView VerticalOptions="FillAndExpand">
 			<StackLayout>
-				<Label x:Name="Zprava" />
+				<Label x:Name="Zprava" TextType="Html"/>
 				<!-- More Label objects go here -->
 			</StackLayout>
 		</ScrollView>
