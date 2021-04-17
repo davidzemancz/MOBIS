@@ -3,41 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MOBIS.Views.new_message_form">
 	<StackLayout Margin="10,20">
-		<Label Text="Nová upráva"
+		<Label Text="Nová Zpráva"
             VerticalOptions="Center"
             HorizontalOptions="Center"/>
 
 		<Grid HorizontalOptions="FillAndExpand">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="*"/>
-				<RowDefinition Height="*"/>
-				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>
-			<Entry Grid.Row="0" Placeholder="datum" FontAttributes="Bold"/>
+			<Entry Grid.Row="0" Placeholder="datum" FontAttributes="Bold" x:Name="Datum"/>
 		</Grid>
 
 		<Grid HorizontalOptions="FillAndExpand">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="*"/>
-				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>
-			<Label Grid.Row="0" Text="Last Name:" FontAttributes="Bold"/>
+			<Entry Grid.Row="0" Placeholder="Autor" FontAttributes="Bold" x:Name="Autor"/>
 		</Grid>
 
 		<Grid HorizontalOptions="FillAndExpand">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="*"/>
-				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>
-			<Label Grid.Row="0" Text="Company:" FontAttributes="Bold"/>
+			<Entry Grid.Row="0" Placeholder="Titulek:" FontAttributes="Bold" x:Name="Titulek"/>
 		</Grid>
+		
 		
 		<Grid HorizontalOptions="FillAndExpand">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="*"/>
 				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>
-			<Label Grid.Row="0" Text="Company:" FontAttributes="Bold"/>
+			<Editor AutoSize="TextChanges" Grid.Row="0" Text="Zpráva:" FontAttributes="Bold" x:Name="Zprava"/>
 		</Grid>
+
+		<Button  Grid.Row="2" Text="Hotovo" FontAttributes="Bold" Clicked="parseText"/>
+
 	</StackLayout>
 </ContentPage>
