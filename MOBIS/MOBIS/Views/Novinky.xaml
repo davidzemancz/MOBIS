@@ -11,10 +11,13 @@
                 <ViewCell>
 					<StackLayout BackgroundColor="#ffffff" Orientation="Vertical" Padding="16,16,16,0">
 						<StackLayout Orientation="Horizontal">
-							<Label Text="{Binding Title}" TextColor="Black" FontSize="17" FontAttributes="Bold" TextDecorations="None"/>
-                            <Label Text="{Binding Date}" TextColor="Black" FontSize="15"  TextDecorations="None" HorizontalOptions="EndAndExpand"/>
+							<Label Text="{Binding Title}" TextColor="Black" FontSize="18" FontAttributes="Bold" TextDecorations="Underline"/>
+                            <Label Text="{Binding Workplace}" Padding="0,4,0,0" TextColor="Black" FontSize="15"  TextDecorations="None" HorizontalOptions="EndAndExpand"/>
+                            <Label Text="{Binding Date}" Padding="0,4,0,0" TextColor="Black" FontSize="15"  TextDecorations="None" HorizontalOptions="End"/>
                         </StackLayout>
-                        <Label Text="{Binding Category}" Padding="4,0,0,0" TextColor="Black" FontSize="15"  TextDecorations="None"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Category}" Padding="4,0,0,0" TextColor="Black" FontSize="15"  TextDecorations="None"/>
+                        </StackLayout>
                         <Label TextColor="Black" LineBreakMode="WordWrap" Text="{Binding ContentText}" MaxLines="6" TextType="Html"/>
                         <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
 						    <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
