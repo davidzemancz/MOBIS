@@ -4,29 +4,32 @@
              x:Class="MOBIS.Views.Informace">
 	<ListView x:Name="NovinkyListView"
               ItemsSource="{Binding Papers}"
-              RowHeight = "200">
+              RowHeight = "250">
 		<ListView.ItemTemplate>
 			<DataTemplate>
 				<ViewCell>
-					<StackLayout BackgroundColor="#ffffff" Orientation="Vertical" Padding="16">
-						<StackLayout Orientation="Horizontal">
-							<Label Text="{Binding Title}" TextColor="Black" FontSize="17" FontAttributes="Bold" TextDecorations="None"/>
-							<Label Text="{Binding Date}" TextColor="Black" FontSize="15"  TextDecorations="None" HorizontalOptions="EndAndExpand"/>
-						</StackLayout>
-						<Label Text="{Binding Category}" Padding="4,0,0,0" TextColor="Black" FontSize="15"  TextDecorations="None"/>
-                        <Label TextColor="Black" LineBreakMode="WordWrap" Text="{Binding ContentText}" MaxLines="5" TextType="Html"/>
-						<StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
-							<StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
-								<StackLayout Orientation="Vertical"  VerticalOptions="EndAndExpand">
-									<Button IsVisible="{Binding Editable}" Text="Upravit" x:Name="EditButton" FontSize="12" Clicked="Edit" TextColor="Blue" BackgroundColor="Transparent" CommandParameter="{Binding Id}"/>
-								</StackLayout>
-								<StackLayout Orientation="Vertical"  HorizontalOptions="EndAndExpand">
-									<Button  IsVisible="{Binding ContentTextIsTooLong}" Text="Číst dále..." x:Name="CistVice" HorizontalOptions="EndAndExpand" FontSize="12" Clicked="cist_vice" TextColor="Blue" BackgroundColor="Transparent" CommandParameter="{Binding Id}"/>
-								</StackLayout>
-							</StackLayout>
-						</StackLayout>
-					</StackLayout>
-				</ViewCell>
+                    <StackLayout BackgroundColor="#ffffff" Orientation="Vertical" Padding="16,16,16,0">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Title}" TextColor="Black" FontSize="18" FontAttributes="Bold" TextDecorations="Underline"/>
+                            <Label Text="{Binding Workplace}" Padding="0,4,0,0" TextColor="Black" FontSize="15"  TextDecorations="None" HorizontalOptions="EndAndExpand"/>
+                            <Label Text="{Binding Date}" Padding="0,4,0,0" TextColor="Black" FontSize="15"  TextDecorations="None" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Category}" Padding="4,0,0,0" TextColor="Black" FontSize="15"  TextDecorations="None"/>
+                        </StackLayout>
+                        <Label TextColor="Black" LineBreakMode="WordWrap" Text="{Binding ContentText}" MaxLines="6" TextType="Html"/>
+                        <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+                            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Vertical"  VerticalOptions="EndAndExpand">
+                                    <Button IsVisible="{Binding Editable}" Text="Upravit" x:Name="EditButton" FontSize="12" Clicked="Edit" TextColor="Blue" BackgroundColor="Transparent" CommandParameter="{Binding Id}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical"  HorizontalOptions="EndAndExpand">
+                                    <Button  IsVisible="{Binding ContentTextIsTooLong}" Text="Číst dále..." x:Name="CistVice" HorizontalOptions="EndAndExpand" FontSize="12" Clicked="cist_vice" TextColor="Blue" BackgroundColor="Transparent" CommandParameter="{Binding Id}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
 			</DataTemplate>
 		</ListView.ItemTemplate>
 	</ListView>
