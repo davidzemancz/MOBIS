@@ -28,7 +28,7 @@ namespace MOBIS.Views
 
             this.NovinkyListView.ItemsSource = this.Papers;
 
-            string jsonInData = "{ \"UserId\":" + User.Current.Id + ",\"Type\":2}"; //jednicka pro novinky, 2 pro informace
+            string jsonInData = "{ \"UserId\":" + User.Current.Id + ",\"Type\":\"Informace\"}"; //jednicka pro novinky, 2 pro informace
             string jsonOutData = RestApi.Post("content/list", jsonInData, out bool ok);
             var data = JsonSerializer.Deserialize<Paper[]>(jsonOutData);
             foreach (var paper in data)

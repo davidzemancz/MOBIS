@@ -25,7 +25,7 @@ namespace MOBIS.Views
         void TryToLogin(object sender, EventArgs args)
         {
             
-            User user = new User("pepazdepa@mail.cz", "mamradmekac");
+            User user = new User(Email.Text, Heslo.Text);
             string jsonInData = JsonSerializer.Serialize(user);
             string jsonOutData = RestApi.Post("user/login", jsonInData, out bool ok);
             if (ok)
